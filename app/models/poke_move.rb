@@ -9,5 +9,15 @@
 #  updated_at :datetime         not null
 #
 class PokeMove < ApplicationRecord
-    validates :id, :pokemon_id, :move_id, presence: true 
+    validates  :pokemon_id, :move_id, presence: true 
+    validates :move_id, uniqueness: {scope: :pokemon_id,
+    message: "Pokemon must have unique moves "}
+
+    belongs_to :pokemon,
+    class_name: :Pokemon,
+    foreign_key: :pokemon_id
+
+    belongs_to :move,
+    class_name: :Move,
+    foreign_key: :move_id
 end
