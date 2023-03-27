@@ -8,4 +8,5 @@
 #  updated_at :datetime         not null
 #
 class Move < ApplicationRecord
+    validates :id, :name, presence: true 
 end

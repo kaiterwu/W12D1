@@ -12,4 +12,6 @@
 #  updated_at :datetime         not null
 #
 class Item < ApplicationRecord
+    validates :name, :price, :happiness, :image_url, :id, presence: true
+    
 end
