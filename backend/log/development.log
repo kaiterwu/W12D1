@@ -19744,3 +19744,47 @@ FOREIGN KEY ("pokemon_id")
   [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
   [1m[36mPokeMove Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "poke_moves" WHERE "poke_moves"."move_id" = $1 AND "poke_moves"."pokemon_id" = $2 LIMIT $3[0m  [["move_id", 1], ["pokemon_id", 1], ["LIMIT", 1]]
   [1m[36mTRANSACTION (2.7ms)[0m  [1m[31mROLLBACK[0m
+Started GET "/api/pokemon" for 127.0.0.1 at 2023-03-27 16:44:58 -0400
+Started GET "/favicon.ico" for 127.0.0.1 at 2023-03-27 16:44:58 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+
+AbstractController::ActionNotFound - The action 'index' could not be found for Api::PokemonController:
+
+Started GET "/api/pokemon/types" for 127.0.0.1 at 2023-03-27 16:45:22 -0400
+Processing by Api::PokemonController#types as JSON
+Completed 200 OK in 5ms (Views: 5.2ms | ActiveRecord: 0.0ms | Allocations: 389)
+
+
+Started GET "/api/pokemon" for 127.0.0.1 at 2023-03-27 16:53:34 -0400
+Processing by Api::PokemonController#index as JSON
+Completed 500 Internal Server Error in 5ms (Allocations: 4856)
+
+
+
+ActionView::MissingTemplate - Missing template api/pokemon/index, application/index with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+Searched in::
+  app/controllers/api/pokemon_controller.rb:26:in `index'
+
+Started GET "/api/pokemon" for 127.0.0.1 at 2023-03-27 16:54:45 -0400
+Processing by Api::PokemonController#index as JSON
+Completed 500 Internal Server Error in 1ms (Allocations: 808)
+
+
+
+ActionView::MissingTemplate - Missing template api/pokemon/index, application/index with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+Searched in::
+  app/controllers/api/pokemon_controller.rb:26:in `index'
+
+Started GET "/api/pokemon" for 127.0.0.1 at 2023-03-27 16:56:04 -0400
+Processing by Api::PokemonController#index as JSON
+Completed 500 Internal Server Error in 1ms (Allocations: 770)
+
+
+
+ActionView::MissingTemplate - Missing template api/pokemon/index, application/index with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+Searched in::
+  app/controllers/api/pokemon_controller.rb:26:in `index'
+
